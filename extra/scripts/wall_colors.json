@@ -1,0 +1,26 @@
+{
+    "colors": {
+        "color0":  "#051519",
+        "color8":  "#49565a",
+        "color1":  "#f8818e",
+        "color9":  "#f8818e",
+        "color2":  "#6bb48d",
+        "color10": "#6bb48d",
+        "color3":  "#ffbb6f",
+        "color11": "#ffbb6f",
+        "color4":  "#8ed0ce",
+        "color12": "#8ed0ce",
+        "color5":  "#7e62b3",
+        "color13": "#7e62b3",
+        "color6":  "#6096bf",
+        "color14": "#6096bf",
+        "color7":  "#f7f8f8",
+        "color15": "#f7f8f8"
+    },
+    "wallpaper": "/home/marin/Pictures/Wallpapers/2.jpg",
+    "special": {
+        "cursor":     "#f7f8f8",
+        "background": "#051519",
+        "foreground": "#f7f8f8"
+    }
+}
