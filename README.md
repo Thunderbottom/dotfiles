@@ -21,7 +21,7 @@ The dotfiles are managed using [GNU/stow][1].
 
 Colors managed using [pywal][2].
 
-The color scheme for wal can be found under [scripts](../blob/master/extra/scripts).
+The color scheme for wal can be found under [scripts](/extra/scripts).
 
 
 ##### references
@@ -35,7 +35,7 @@ Wallpaper can be found on [SubtlePatterns][3]. ([Link for the lazy][4])
 
 
 
-[1] : https://www.gnu.org/software/stow/
-[2] : https://github.com/dylanaraps/pywal
-[3] : https://www.toptal.com/designers/subtlepatterns/
-[4] : https://www.toptal.com/designers/subtlepatterns/small-steps/
+[1]: https://www.gnu.org/software/stow/
+[2]: https://github.com/dylanaraps/pywal
+[3]: https://www.toptal.com/designers/subtlepatterns/
+[4]: https://www.toptal.com/designers/subtlepatterns/small-steps/
