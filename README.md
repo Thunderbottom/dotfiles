@@ -14,6 +14,9 @@
 ###### secondary screen
 ![second-screen](screen2.png)
 
+###### vim
+![vim-screen](scrot_vim.png)
+
 
 ##### management
 
