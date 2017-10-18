@@ -1,0 +1,47 @@
+####################
+##      Alias     ##
+####################
+
+# show top 10 commands from history
+alias toph='print -l -- ${(o)history%% *} | uniq -c | sort -nr | head -n 10'
+# colorize output, add file type indicator, and put sizes in human readable format
+alias ls='ls --color -F'
+# same as above, but in long listing format
+alias ll='ls --color -Fl'
+# show only hidden files
+alias lsd='ls -ld .?*'
+# list everything
+alias la='ls -la'
+# show free in human readable format
+alias free="free -h"
+# colorize grep output
+alias grep="grep --color"
+#confirm before overwriting during copy
+alias cp='cp -i'
+# prompt user when deleting a file
+alias rm='rm -i'
+# always print in human readable form
+alias df="df -h"
+
+#
+# git alias
+#
+
+# sign all commits
+alias git commit='git commit -S'
+
+
+####################
+##   Functions    ##
+####################
+
+#colorize path 
+path() {
+  echo $PATH | tr ":" "\n" | \
+    awk "{ sub(\"/usr\",   \"$fg_no_bold[green]/usr$reset_color\"); \
+           sub(\"/bin\",   \"$fg_no_bold[blue]/bin$reset_color\"); \
+           sub(\"/opt\",   \"$fg_no_bold[cyan]/opt$reset_color\"); \
+           sub(\"/sbin\",  \"$fg_no_bold[magenta]/sbin$reset_color\"); \
+           sub(\"/local\", \"$fg_no_bold[yellow]/local$reset_color\"); \
+           print }"
+}

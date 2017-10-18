@@ -1,4 +1,3 @@
-colorscheme oceannext
 syntax on
 set number
 call plug#begin('~/.vim/plugged')
