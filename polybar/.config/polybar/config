@@ -1,5 +1,4 @@
-[settings]
-throttle-output 		= 	5
+
 throttle-output-for 		= 	10
 throttle-input-for 		= 	30
 screenchange-reload 		= 	false
@@ -17,7 +16,7 @@ top 				= 	true
 width 				= 	100%
 height 				= 	20
 offset-x 			= 	0
-offset-y 			= 	0
+ioffset-y 			= 	0
 radius 				= 	0
 fixed-center 			= 	true
 
@@ -136,18 +135,18 @@ type 				= 	custom/menu
 
 format-spacing 			= 	1
 
-label-open 			=	Power
+label-open 			=	
 label-open-background 		=	${colors.background}
 label-open-foreground 		= 	${colors.foreground}
-label-close 			= 	x
+label-close 			= 	
 label-close-background 		= 	${colors.background}
 label-close-foreground 		= 	${colors.foreground}
 label-separator 		= 	" "
 label-separator-foreground 	= 	${colors.foreground}
 
-menu-0-0 			= 	Reboot
+menu-0-0 			= 	
 menu-0-0-exec 			= 	shutdown -r now
-menu-0-1 			= 	Power Off
+menu-0-1 			= 	
 menu-0-1-exec 			= 	shutdown now
 
 [global/wm]
