@@ -1,5 +1,4 @@
-syntax on
-set number
+
 call plug#begin('~/.vim/plugged')
 
 	"vim-lion: https://github.com/tommcdo/vim-lion
@@ -32,6 +31,9 @@ call plug#begin('~/.vim/plugged')
 	"tagbar: https://github.com/majutsushi/tagbar
 	Plug 'majutsushi/tagbar'
 
+	" A Vim Plugin for Lively Previewing LaTeX PDF Output
+	Plug 'xuhdev/vim-latex-live-preview'
+
 call plug#end()
 
 
@@ -48,3 +50,9 @@ map <C-n> :NERDTreeToggle<CR>
 
 " close vim if nerdtree is the only window
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" LaTeX live preview editor
+let g:livepreview_previewer = 'zathura'
+
+" LaTeX live preview engine
+let g:livepreview_engine = 'pdflatex'
