@@ -6,7 +6,7 @@
 # set the colors
 fg=$'\e[37m'
 ac=$'\e[31m'
-bl=$'\e[36m'
+bl=$'\e[92m'
 # get os
 get_os() {
 	os=$(source /etc/os-release && echo "$ID $VERSION_ID")
@@ -50,7 +50,7 @@ get_wm() {
 
 # get number of packages
 get_packages() {
-	packages=$(pacman -Qe | wc -l)
+	packages=$(xbps-query -l | wc -l)
 }
 
 # run all functions
@@ -64,11 +64,11 @@ get_packages
 # output
 cat << EOF
 
-	  ${bl}#		${ac}os:${fg} ${os}
-         ${bl}###		${ac}kernel:${fg} ${kernel}
-        ${bl}#####		${ac}model:${fg} ${model}
-       ${bl}#######		${ac}shell:${fg} ${shell}
-      ${bl}#### ####		${ac}packages:${fg} ${packages}      
-     ${bl}###     ###	${ac}wm:${fg} ${wm}
+ ${bl}####       ##     ${ac}os:${fg} ${os}
+  ${bl}####     ##      ${ac}kernel:${fg} ${kernel}
+   ${bl}####   ##       ${ac}model:${fg} ${model}
+    ${bl}#### ##        ${ac}shell:${fg} ${shell}
+     ${bl}#####         ${ac}packages:${fg} ${packages}      
+      ${bl}###          ${ac}wm:${fg} ${wm}
 
 EOF

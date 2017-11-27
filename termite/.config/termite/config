@@ -1,85 +1,33 @@
 [options]
 allow_bold = true
-#audible_bell = false
-#clickable_url = true
-#dynamic_title = true
-font = UW Ttyp0 9
-#fullscreen = true
-#geometry = 640x480
-#icon_name = terminal
+font = GohuFont 8
 mouse_autohide = true
-#scroll_on_output = false
-#scroll_on_keystroke = true
-# Length of the scrollback buffer, 0 disabled the scrollback buffer
-# and setting it to a negative value means "infinite scrollback"
 scrollback_lines = 10000
-#search_wrap = true
-#urgent_on_bell = true
-
-# $BROWSER is used by default if set, with xdg-open as a fallback
-#browser = xdg-open
-
-# "system", "on" or "off"
-#cursor_blink = system
-
-# "block", "underline" or "ibeam"
 cursor_shape = ibeam
-
-# Hide links that are no longer valid in url select overlay mode
-#filter_unmatched_urls = true
-
-# Emit escape sequences for extra modified keys
-#modify_other_keys = false
-
-# set size hints for the window
-#size_hints = false
-
-# "off", "left" or "right"
 scrollbar = off
 
 [colors]
-# If both of these are unset, cursor falls back to the foreground color,
-# and cursor_foreground falls back to the background color.
-#cursor = #dcdccc
-#cursor_foreground = #dcdccc
-
-#foreground = #dcdccc
-#foreground_bold = #ffffff
-#background = #3f3f3f
-
-# 20% background transparency (requires a compositor)
-#background = rgba(63, 63, 63, 0.8)
-
-# If unset, will reverse foreground and background
-highlight = #2f2f2f
-
-# Colors from color0 to color254 can be set
+highlight = #2F2F2F
 color0 = #051519
-color1 = #F8818E
-color2 = #6BB48D
-color3 = #FFBB6F
-color4 = #8ED0CE
-color5 = #7E62B3
-color6 = #6096BF
-color7 = #F7F8F8
-color8 = #49565A
-color9 = #F8818E
-color10 = #6BB48D
-color11 = #FFBB6F
-color12 = #8ED0CE
-color13 = #7E62B3
-color14 = #6096BF
-color15 = #F7F8F8
+color1 = #F2777A
+color2 = #99CC99
+color3 = #FFCC66
+color4 = #6699CC
+color5 = #CC99CC
+color6 = #66CCCC
+color7 = #F2F0EC
+color8 = #747369
+color9 = #F2777A
+color10 = #99CC99
+color11 = #FFCC66
+color12 = #6699CC
+color13 = #CC99CC
+color14 = #66CCCC
+color15 = #F2F0EC
 
 [hints]
-#font = UW Ttyp0 9
-#foreground = #dcdccc
-#background = #3f3f3f
+foreground = #F2F0EC
+background = #051519
 #active_foreground = #e68080
 #active_background = #3f3f3f
 padding = 2
-#border = #3f3f3f
-#border_width = 0.5
-#roundness = 2.0
-
-# vim: ft=dosini cms=#%s

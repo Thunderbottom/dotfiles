@@ -1,7 +1,14 @@
-#
-# ~/.zshrc
-#
-
+#      ___           ___           ___     
+#     /\  \         /\  \         /\__\    
+#     \:\  \       /::\  \       /:/  /    
+#      \:\  \     /:/\ \  \     /:/__/     
+#       \:\  \   _\:\~\ \  \   /::\  \ ___ 
+# _______\:\__\ /\ \:\ \ \__\ /:/\:\  /\__\
+# \::::::::/__/ \:\ \:\ \/__/ \/__\:\/:/  /
+#  \:\~~\~~      \:\ \:\__\        \::/  / 
+#   \:\  \        \:\/:/  /        /:/  /  
+#    \:\__\        \::/  /        /:/  /   
+#     \/__/         \/__/         \/__/    
 
 PATH=${PATH}:~/bin:~/scripts
 
@@ -179,3 +186,4 @@ unsetopt list_beep
 # ask for confirmation for `rm *` or `rm path/*`
 unsetopt rm_star_silent
 
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
