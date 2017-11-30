@@ -1,0 +1,129 @@
+#!/usr/bin/env bash
+
+# GENERAL
+
+# set colors
+f7=$'\e[37m'
+f1=$'\e[31m'
+
+# FUNCTIONS
+
+# check if a command exists
+exists() {
+    command -v "$1" > /dev/null
+}
+
+# memed
+memed() {
+    echo "meme"
+}
+
+# not memed
+not_memed() {
+    echo "not a meme"
+}
+
+# look for pywal
+check_wal() {
+    if exists wal; then
+        memed
+    else
+        not_memed
+    fi
+}
+
+# look for i3-gaps
+check_wm() {
+   if exists i3; then
+       if i3 -v | grep -q gaps; then
+           memed
+       else
+           not_memed
+       fi
+   else
+       not_memed
+   fi
+}
+
+# look for polybar
+check_bar() {
+    if exists polybar; then
+        memed
+    else
+        not_memed
+    fi
+}
+
+# look for neofetch
+check_fetch() {
+   if exists neofetch; then
+       memed
+   else
+       not_memed
+   fi
+}
+
+# look for urxt and termite
+check_term() {
+    if exists urxvt || exists termite; then
+        memed
+    else
+        not_memed
+    fi
+}
+
+# look for void and arch
+check_distro() {
+    # check based on the OS
+    os=$(source /etc/os-release && echo "$ID $VERSION_ID")
+    if [[ "${os}" != +(arch|void) ]]; then
+        memed
+    else
+        not_memed
+    fi
+}
+
+# look for oh-my-zsh
+check_omz() {
+    if [[ -d ${HOME}/.oh-my-zsh ]]; then
+        memed
+    else
+        not_memed
+    fi
+}
+
+# look for arc and numix themes
+check_theme() {
+    # gtk 2
+    if [[ -f ${HOME}/.gtkrc-2.0 ]]; then
+        if < "${HOME}/.gtkrc-2.0" grep -qP '(Arc|Numix)'; then
+            memed
+        else
+            not_memed
+        fi
+    # gtk 3
+    elif [[ -f ${HOME}/.config/gtk-3.0/settings.ini ]]; then
+        if < "${HOME}/.config/gtk-3.0/settings.ini" grep -qP '(Arc|Numix)'; then
+            memed
+        else
+            not_memed
+        fi
+    else
+        not_memed
+    fi
+}
+
+# OUTPUT
+
+cat << EOF
+
+       me           ${f1}distro:${f7} $(check_distro)
+      meme          ${f1}colors:${f7} $(check_wal)
+     me   m         ${f1}bar:${f7} $(check_bar)
+    e      m        ${f1}wm:${f7} $(check_wm)
+   e   me   m       ${f1}fetch:${f7} $(check_fetch)
+  e mem  ememe      ${f1}theme:${f7} $(check_theme)
+ mem        eme     ${f1}term:${f7} $(check_term)
+m              e    ${f1}shell:${f7} $(check_omz)
+
+EOF

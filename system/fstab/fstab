@@ -1,0 +1,9 @@
+UUID=12d2d4dd-906a-4378-ae32-f69dfa08de04 / ext4 rw,relatime,data=ordered,discard 0 1
+UUID=8ac9f321-9e30-4bf4-9152-db59f297ae29 none swap sw 0 0
+UUID=34BE-563D /boot/efi vfat rw,relatime 0 2
+tmpfs /tmp tmpfs defaults,nosuid,nodev 0 0
+
+# hdd
+UUID=02b58034-d250-4a2d-b854-484c399c687e /home/tbottom/hdd ext4 rw,defaults,user 0 0
+# seagate
+UUID=65cd4562-ce79-49e7-9c9f-94e17ccee42f /home/tbottom/seagate ext4 nofail,auto,noatime,rw,user 0 0

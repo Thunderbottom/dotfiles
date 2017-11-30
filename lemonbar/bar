@@ -1,0 +1,77 @@
+#!/usr/bin/env bash
+# script : bar (lemonbar)
+
+# fetch colors from wal
+. "${HOME}/.cache/wal/colors.sh"
+
+# format an icon
+icon() {
+    printf "%s\\n" "%{F${color1}}${1}%{F-}"
+}
+
+# get workspaces
+workspaces() {
+    current_workspace=$(wmctrl -d | awk '/\*/ {print $NF}')
+    case "$current_workspace" in
+        1) printf "%s\\n" "$(icon )";;
+        2) printf "%s\\n" "$(icon )";;
+        3) printf "%s\\n" "$(icon )";;
+        4) printf "%s\\n" "$(icon )";;
+        5) printf "%s\\n" "$(icon )";;
+    esac
+}
+
+# get song
+song() {
+    if cmus-remote -C status | grep -q playing; then
+        printf "%.75s\\n" "$(icon ) $(cmus-remote -Q | grep title | cut -d ' ' -f3-)"
+    fi
+}
+
+# get clock
+clock() {
+    printf "%s\\n" "$(icon ) $(date +'%a %H:%M')"
+}
+
+# get network
+network() {
+    network_id=$(/sbin/iwgetid -r)
+    if [ -n "$network_id" ]; then
+        printf "%s\\n" "$(icon ) ${network_id}"
+    else
+        printf "%s\\n" "$(icon ) offline"
+    fi
+}
+
+# get battery
+battery() {
+    battery_percent=$(cat /sys/class/power_supply/BAT0/capacity)
+    if [ "$battery_percent" -eq 100 ]; then
+        printf "%s\\n" "$(icon ) ${battery_percent}%"
+    elif [ "$battery_percent" -gt 75 ]; then
+        printf "%s\\n" "$(icon ) ${battery_percent}%"
+    elif [ "$battery_percent" -gt 25 ]; then
+        printf "%s\\n" "$(icon ) ${battery_percent}%"
+    else
+        printf "%s\\n" "$(icon ) ${battery_percent}%"
+    fi
+}
+
+# main
+main() {
+    # loop
+    while :; do
+       printf "%s%s%s\\n" \
+	    "%{S1}" \
+            "%{l}  $(workspaces)  $(song)" \
+            "%{c}$(clock)" \
+            "%{r}$(network)  $(battery)  "
+        sleep .5s
+    done |\
+    # lemonbar settings
+    lemonbar -g 'x25' \
+        -f 'Ttyp0:size=8' -f 'Siji:size=8' \
+        -B "${color0}" -F "${color7}"
+}
+
+main

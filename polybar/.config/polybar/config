@@ -215,7 +215,7 @@ format-online-padding 		= 	3
 
 [module/update]
 type 				= 	custom/script
-interval 			= 	1200
+interval 			= 	1000
 format 				= 	<label>
 format-padding 			= 	2
 label 				= 	"%output:0:30%"
