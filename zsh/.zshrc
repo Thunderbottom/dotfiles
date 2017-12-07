@@ -10,7 +10,7 @@
 #    \:\__\        \::/  /        /:/  /   
 #     \/__/         \/__/         \/__/    
 
-PATH=${PATH}:~/bin:~/scripts
+PATH=${PATH}:~/bin:~/scripts:~/.cargo/bin
 
 # alias
 source ~/.alias

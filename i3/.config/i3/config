@@ -106,6 +106,7 @@ bindsym $mod+Shift+l exec lockscreeni3
 
 for_window [class="Termite"] move to workspace 1
 for_window [class="Nightly"] move to workspace 2
+for_window [class="Firefox"] move to workspace 2
 for_window [class="Zathura"] move to workspace 4
 for_window [class="TelegramDesktop"] move to workspace 9
 for_window [class="Spotify"] move to workspace 10
@@ -161,11 +162,11 @@ exec --no-startup-id polybar -c ~/.config/polybar/config -r laptop
 # Set feh wallpaper
 exec_always --no-startup-id ~/.fehbg
 # Start compton
-exec_always --no-startup-id compton -f
+exec_always --no-startup-id compton -fcC
 # Start unclutter
-exec --no-startup-id unclutter -grab &
+#exec --no-startup-id unclutter -grab &
 # Start Firefox
-exec --no-startup-id firefox-nightly
+exec --no-startup-id firefox
 # Start terminal
 exec --no-startup-id termite
 
@@ -174,10 +175,10 @@ exec --no-startup-id termite
 ##   Multimedia Bindings   ##
 #############################
 
-# Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+# Audio controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q sset Master 5%+ #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q sset Master 5%- #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id amixer -q sset Master toggle # mute sound
 
 # Screen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
@@ -188,10 +189,9 @@ bindsym XF86KbdBrightnessUp exec keyboardbacklight.sh up
 bindsym XF86KbdBrightnessDown exec keyboardbacklight.sh down 
 
 # Media player controls
-bindsym XF86AudioPlay exec playerctl play
-bindsym XF86AudioPause exec playerctl pause
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86AudioPlay exec mpc toggle
+bindsym XF86AudioNext exec mpc next
+bindsym XF86AudioPrev exec mpc prev
 
 
 #############################

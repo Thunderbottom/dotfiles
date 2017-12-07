@@ -22,13 +22,10 @@ alias cp='cp -i'
 alias rm='rm -i'
 # always print in human readable form
 alias df="df -h"
-
-#
-# git alias
-#
-
-# sign all commits
-alias git commit='git commit -S'
+# open neovim for vim
+alias vim="nvim"
+# open cava with sndio
+alias cava="AUDIODEVICE=snd/0.monitor cava"
 
 
 ####################
