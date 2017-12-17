@@ -117,13 +117,13 @@ check_theme() {
 
 cat << EOF
 
-       me           ${f1}distro:${f7} $(check_distro)
-      meme          ${f1}colors:${f7} $(check_wal)
-     me   m         ${f1}bar:${f7} $(check_bar)
-    e      m        ${f1}wm:${f7} $(check_wm)
-   e   me   m       ${f1}fetch:${f7} $(check_fetch)
-  e mem  ememe      ${f1}theme:${f7} $(check_theme)
- mem        eme     ${f1}term:${f7} $(check_term)
-m              e    ${f1}shell:${f7} $(check_omz)
+ meme            me	${f1}distro:${f7} $(check_distro)
+  meme          me	${f1}colors:${f7} $(check_wal)
+   meme        me	${f1}bar:${f7} $(check_bar)
+    meme      me	${f1}wm:${f7} $(check_wm)
+     meme    me		${f1}fetch:${f7} $(check_fetch)
+      meme  me		${f1}theme:${f7} $(check_theme)
+       mememe		${f1}term:${f7} $(check_term)
+        meme		${f1}shell:${f7} $(check_omz)
 
 EOF

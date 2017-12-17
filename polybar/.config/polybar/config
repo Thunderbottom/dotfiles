@@ -35,7 +35,7 @@ offset-y 			= 	0
 ;bottom 			= 	true
 fixed-center 			= 	true
 override-redirect 		= 	false
-wm-restack 			= 	i3
+wm-restack 			= 	bspwm
 background 			= 	${colors.background}
 foreground 			= 	${colors.foreground}
 border-bottom-size 		= 	0
@@ -51,9 +51,9 @@ module-margin-right 		= 	0
 font-0 				= 	GohuFont:pixelsize=11;1
 font-1 				= 	Siji:size=10;1
 
-modules-left 			= 	powermenu i3
+modules-left 			= 	bspwm
 modules-center 			=	mpd
-modules-right 			= 	update wifi volume date battery 
+modules-right 			= 	wifi volume date battery 
 
 ; ----------
 ; MODULES
@@ -61,14 +61,15 @@ modules-right 			= 	update wifi volume date battery
 
 
 ; ----------
-; i3wm
+; bspwm
 ; ----------
 
-[module/i3]
-type 				= 	internal/i3
+[module/bspwm]
+type 				= 	internal/bspwm
 format 				= 	<label-state> <label-mode>
 strip-wsnumbers 		= 	true
 index-sort 			= 	true
+enable-scroll			=	false
 ws-icon-0 			= 	1;
 ws-icon-1 			= 	2;
 ws-icon-2 			= 	3;

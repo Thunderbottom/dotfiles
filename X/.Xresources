@@ -14,15 +14,15 @@
 ! Enable the extended coloring options
 rofi.color-enabled: true
 !                  bg       border   separator
-rofi.color-window: #1c1c22, #3e646f, #3e646f
+rofi.color-window: #020202, #444444, #444444
 !                  bg       fg       bg-alt   hl-bg    hl-fg
-rofi.color-normal: #1c1c22, #bcbcbc, #1c1c22, #3e646f, #bcbcbc
-rofi.color-active: #1c1c22, #bcbcbc, #1c1c22, #3e646f, #bcbcbc
-rofi.color-urgent: #1c1c22, #bcbcbc, #1c1c22, #3e646f, #bcbcbc
+rofi.color-normal: #020202, #bcbcbc, #020202, #444444, #bcbcbc
+rofi.color-active: #020202, #bcbcbc, #020202, #444444, #bcbcbc
+rofi.color-urgent: #020202, #bcbcbc, #020202, #444444, #bcbcbc
 
 rofi.separator-style: solid
 rofi.sidebar-mode: true
-rofi.lines: 5
+rofi.lines: 3
 rofi.font: GohuFont 9
 rofi.bw: 1
 rofi.columns: 1
