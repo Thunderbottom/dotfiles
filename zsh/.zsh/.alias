@@ -25,7 +25,7 @@ alias df="df -h"
 # open neovim for vim
 alias vim="nvim"
 # open cava with sndio
-alias cava="AUDIODEVICE=snd/0.monitor cava"
+# alias cava="AUDIODEVICE=snd/0.monitor cava"
 
 
 ####################

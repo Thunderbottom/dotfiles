@@ -1,0 +1,6 @@
+mpd/*
+ncmpcpp/*
+nvim/.config/nvim/.netrwhist
+
+!mpd/.config/mpd/mpd.conf
+!ncmpcpp/.ncmpcpp/config

@@ -2,21 +2,6 @@
 
 ドットドットドットドット
 
-##### screenshot
-
-###### multiple screen layout
-
-![full-size](scrot.png)
-
-###### main screen layout
-![main-screen](screen1.png)
-
-###### secondary screen
-![second-screen](screen2.png)
-
-###### vim
-![vim-screen](scrot_vim.png)
-
 
 ##### management
 
