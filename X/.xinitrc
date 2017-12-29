@@ -6,5 +6,7 @@ fi
 
 wal -r
 
+nitrogen --reload
+
 exec bspwm
 
