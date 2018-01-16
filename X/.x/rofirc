@@ -1,0 +1,21 @@
+! rofi setup
+
+! enable the extended coloring options
+rofi.color-enabled: true
+
+!                  bg       border   separator
+rofi.color-window: #020202, #444444, #444444
+!                  bg       fg       bg-alt   hl-bg    hl-fg
+rofi.color-normal: #020202, #bcbcbc, #020202, #444444, #bcbcbc
+rofi.color-active: #020202, #bcbcbc, #020202, #444444, #bcbcbc
+rofi.color-urgent: #020202, #bcbcbc, #020202, #444444, #bcbcbc
+
+rofi.separator-style: solid
+rofi.sidebar-mode: true
+rofi.lines: 3
+rofi.font: Gohu GohuFont 9
+rofi.bw: 1
+rofi.columns: 1
+rofi.padding: 5
+rofi.fixed-num-lines: true
+rofi.hide-scrollbar: true   

@@ -1,0 +1,7 @@
+gtk-icon-theme-name = "Paper"
+gtk-font-name = "Gohu GohuFont 9"
+
+style "user-font"
+{
+	font_name="Gohu GohuFont 9"
+}

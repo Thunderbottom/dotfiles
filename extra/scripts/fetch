@@ -1,0 +1,74 @@
+#!/bin/bash
+# author: mannahoc
+# light alternative for (neo/screen)fetch
+
+
+# set the colors
+fg=$'\e[37m'
+ac=$'\e[31m'
+bl=$'\e[92m'
+# get os
+get_os() {
+	os=$(source /etc/os-release && echo "$ID $VERSION_ID")
+}
+
+# get kernel
+get_kernel() {
+	kernel=$(uname -r)
+	kernel=${kernel//-amd64}
+}
+
+# get model
+get_model() {
+        if [[ -f /sys/devices/virtual/dmi/id/product_name ||
+           -f /sys/devices/virtual/dmi/id/product_version ]]; then
+                model="$(< /sys/devices/virtual/dmi/id/product_name)"
+                model+=" $(< /sys/devices/virtual/dmi/id/product_version)"
+
+            elif [[ -f /sys/firmware/devicetree/base/model ]]; then
+                model="$(< /sys/firmware/devicetree/base/model)"
+
+            elif [[ -f /tmp/sysinfo/model ]]; then
+                model="$(< /tmp/sysinfo/model)"
+	fi
+}
+
+# get shell
+get_shell() {
+	shell=$(basename "$SHELL")
+}
+
+# get wm
+get_wm() {
+	wm_id=$(xprop -root -notype _NET_SUPPORTING_WM_CHECK)
+	wm_id=${wm_id##* }
+	wm=$(xprop -id "$wm_id" -notype -len 100 -f _NET_WM_NAME 8t)
+	wm=${wm/*_NET_WM_NAME = }
+	wm=${wm/\"}
+	wm=${wm/\"*}
+}
+
+# get number of packages
+get_packages() {
+	packages=$(qlist -IRv | wc -l)
+}
+
+# run all functions
+get_model
+get_os
+get_kernel
+get_shell
+get_wm
+get_packages
+
+# output
+cat << EOF
+
+		${ac}os:${fg} ${os}
+		${ac}kernel:${fg} ${kernel}
+ GENTOO		${ac}model:${fg} ${model}
+        LINUX	${ac}shell:${fg} ${shell}
+		${ac}packages:${fg} ${packages}      
+		${ac}wm:${fg} ${wm}
+
+EOF

@@ -1,0 +1,17 @@
+# misc
+
+setopt auto_cd
+setopt auto_remove_slash
+setopt chase_links
+setopt correct
+setopt extended_glob
+setopt glob_dots
+setopt print_exit_value
+unsetopt beep
+unsetopt bg_nice
+unsetopt clobber
+unsetopt hist_beep
+unsetopt hup
+unsetopt ignore_eof
+unsetopt list_beep
+unsetopt rm_star_silent

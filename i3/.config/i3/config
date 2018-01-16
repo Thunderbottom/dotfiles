@@ -1,0 +1,105 @@
+set $mod Mod4
+
+font pango:Gohu GohuFont 8
+floating_modifier $mod
+bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
+bindsym $mod+Shift+q kill
+
+bindsym $mod+d exec --no-startup-id dmenu_run -nb "#000000" -nf "#ffffff" -sb "#adadad" -fn "Gohu GohuFont-8"
+
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+bindsym $mod+h split h
+bindsym $mod+v split v
+bindsym $mod+f fullscreen toggle
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+space focus mode_toggle
+bindsym $mod+a focus parent
+#bindsym $mod+d focus child
+
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+0 move container to workspace 10
+
+# class                 border  backgr. text    indicator child_border
+client.focused          #8f8f8f #adadad #ffffff #cdcdcd   #8f8f8f
+client.focused_inactive #333333 #5f676a #ffffff #cdcdcd   #555555
+client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+client.background       #ffffff
+
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'HELO U R ABOUT TO EXIT i3' -b 'EXIT' 'i3-msg exit'"
+
+mode "resize" {
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+bar {
+        status_command i3blocks
+	colors {
+           statusline #eeeeee
+           separator #666666
+           #                  border  backgr. text
+           focused_workspace  #ffffff #000000 #ffffff
+           active_workspace   #333333 #222222 #ffffff
+           inactive_workspace #333333 #222222 #888888
+           urgent_workspace   #2f343a #900000 #ffffff
+        }
+}
+
+for_window [class=".*"] border pixel 2
+
+exec_always --no-startup-id $HOME/.screenlayout/xrandr-i3.sh
+exec_always --no-startup-id nitrogen --restore
+exec_always --no-startup-id compton -fcC
+
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+bindsym XF86KbdBrightnessUp exec keyboardbacklight.sh up
+bindsym XF86KbdBrightnessDown exec keyboardbacklight.sh down
+bindsym XF86AudioPlay exec mpc toggle
+bindsym XF86AudioNext exec mpc next
+bindsym XF86AudioPrev exec mpc prev
+

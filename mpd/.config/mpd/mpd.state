@@ -1,0 +1,86 @@
+sw_volume: 100
+audio_device_state:0:alsa audio
+audio_device_state:1:PulseAudio
+audio_device_state:1:fifo
+state: pause
+current: 1
+time: 8.464000
+random: 1
+repeat: 0
+single: 0
+consume: 0
+crossfade: 5
+mixrampdb: 0.000000
+mixrampdelay: -1.000000
+playlist_begin
+0:FLAC/Arcade Fire/Everything Now/02. Everything Now.flac
+1:FLAC/Arcade Fire/Everything Now/04. Creature Comfort.flac
+2:FLAC/Bastille/Bastille - Bad Blood (2013) - FLAC/01 - Bastille - 2013 - Pompeii.flac
+3:FLAC/Bastille/Bastille - Bad Blood (2013) - FLAC/02 - Bastille - 2013 - Things We Lost In The Fire.flac
+4:FLAC/Bastille/Bastille - Bad Blood (2013) - FLAC/07 - Bastille - 2013 - Icarus.flac
+5:FLAC/Bastille/Bastille - Bad Blood (2013) - FLAC/08 - Bastille - 2013 - Oblivion.flac
+6:FLAC/Bastille/Bastille - Bad Blood (2013) - FLAC/09 - Bastille - 2013 - Flaws.flac
+7:FLAC/Cage The Elephant/Cage_The_Elephant-Melophobia-CD-FLAC-2013-FORSAKEN/04-cage_the_elephant-its_just_forever_(feat._alison_mosshart).flac
+8:FLAC/Cage The Elephant/Cage_The_Elephant-Melophobia-CD-FLAC-2013-FORSAKEN/06-cage_the_elephant-halo.flac
+9:FLAC/Flume/2013 - Flume/01 - Sintra.flac
+10:FLAC/Foo Fighters/Foo Fighters - Echoes, Silence, Patience & Grace [Vinyl 96k]/A1 - The Pretender.flac
+11:FLAC/Foo Fighters/Foo Fighters - 2015 - Saint Cecilia EP (WEB) - 24 192 FLAC/01 - Saint Cecilia.flac
+12:FLAC/Foo Fighters/Foo Fighters - Concrete and Gold (2017) [24-44.1 FLAC]/02. Run.flac
+13:FLAC/Foo Fighters/Foo Fighters - Concrete and Gold (2017) [24-44.1 FLAC]/04. The Sky Is A Neighborhood.flac
+14:FLAC/Foster the People/Foster the People 2011 Torches (Special Limited Edition) [SICP-3575~6]/02 Pumped Up Kicks.flac
+15:FLAC/Foster the People/Foster the People 2011 Torches (Special Limited Edition) [SICP-3575~6]/03 Call It What You Want.flac
+16:FLAC/Foster the People/Foster the People 2011 Torches (Special Limited Edition) [SICP-3575~6]/07 Houdini.flac
+17:FLAC/Foster the People/2014 - Supermodel (Japanese Edition)/03 - Coming Of Age.flac
+18:FLAC/Grizfolk/Waking Up The Giants/06 - Waking Up The Giants.flac
+19:FLAC/Hockey/Hockey.Mind.Chaos.2009.Flac/04 Hockey - Work.flac
+20:FLAC/Kasabian/Singles/Club Foot/01 Kasabian - Club Foot.flac
+21:FLAC/Kasabian/Singles/Fire/01 Kasabian - Fire.flac
+22:FLAC/Kasabian/Singles/Underdog -Sasha Remix [Promo]/01 Kasabian - Underdog.flac
+23:FLAC/Kavinsky/Kavinsky - Outrun [Flac]/Kavinsky_OutRun_008_Kavinsky_Nightcall.flac
+24:FLAC/Maroon 5/Maroon 5 - Songs About Jane {2012 10th Anniversary Edition} (2002) [FLAC]/Disc 1/1.01. Harder To Breathe.flac
+25:FLAC/Maroon 5/Maroon 5 - Songs About Jane {2012 10th Anniversary Edition} (2002) [FLAC]/Disc 1/1.02. This Love.flac
+26:FLAC/Maroon 5/Maroon 5 - Overexposed (Japan Deluxe Edition) (2012) [FLAC]/02 Payphone (Feat. Wiz Khalifa).flac
+27:FLAC/Methyl Ethel/2017 - Everything Is Forgotten/02-Ubu.flac
+28:FLAC/Miike Snow/2016 - iii/03 Genghis Khan.flac
+29:FLAC/Mutemath/MUTEMATH - MUTEMATH (Limited Edition) (2006) [FLAC] {44462-2}/07 - Stare at the Sun.flac
+30:FLAC/Mutemath/MUTEMATH - Armistice (2009) [FLAC] {2-519783}/04 - Spotlight.flac
+31:FLAC/Mutemath/2015 - Vitals/01 - Joy Rides.flac
+32:FLAC/Mutemath/2015 - Vitals/02 - Light Up.flac
+33:FLAC/Mutemath/2015 - Vitals/03 - Monument.flac
+34:FLAC/Mutemath/2015 - Vitals/04 - Stratosphere.flac
+35:FLAC/Mutemath/2015 - Vitals/11 - Safe If We Don’t Look Down.flac
+36:FLAC/Mutemath/MUTEMATH - Changes [2016]/01. MUTEMATH - Changes.flac
+37:FLAC/Nickelback/2017 - Feed the Machine/01-nickelback-feed_the_machine.flac
+38:FLAC/Nickelback/2017 - Feed the Machine/02-nickelback-coin_for_the_ferryman.flac
+39:FLAC/Nothing But Thieves/2015 - Nothing But Thieves/02 - Ban All the Music.flac
+40:FLAC/Nothing But Thieves/2015 - Nothing But Thieves/03 - Wake Up Call.flac
+41:FLAC/Nothing But Thieves/2015 - Nothing But Thieves/06 - Graveyard Whistling.flac
+42:FLAC/Nothing But Thieves/2015 - Nothing But Thieves/08 - Trip Switch.flac
+43:FLAC/Nothing More/2013 - Nothing More (Deluxe Edition)/15-nothing_more-jenny.flac
+44:FLAC/Of Monsters and Men/2011 - My Head is an Animal/01. Dirty Paws.flac
+45:FLAC/Of Monsters and Men/2011 - My Head is an Animal/11. Yellow Light.flac
+46:FLAC/Oh Wonder/Oh Wonder - Ultralife - 2017 - FLAC/02 - Ultralife.flac
+47:FLAC/Panic at the Disco/Panic At The Disco [ALAC]/A Fever You Can't Sweat Out/I Write Sins Not Tragedies.m4a
+48:FLAC/Panic at the Disco/Various Artists - Jennifer's Body - Original Motion Picture Soundtrack [FLAC]/02 New Perspective.flac
+49:FLAC/Phoenix/2017 - Ti Amo/01. J-Boy.flac
+50:FLAC/Polyenso/Polyenso - Pure in the Plastic (2016) (FLAC)/01 - 17 New Years.flac
+51:FLAC/Polyenso/Polyenso - Pure in the Plastic (2016) (FLAC)/03 - I.W.W.I.T.I.W..flac
+52:FLAC/Portishead/Portishead-Portishead-2xLP-1997-FLAC [24bit_96kHz]/D2-Portishead-Elysium.flac
+53:FLAC/Ra Ra Riot/RaRaRiot-BetaLove-Flac(2013)/01 Ra Ra Riot - Dance With Me.flac
+54:FLAC/Ra Ra Riot/Ra Ra Riot - Need Your Light (2016) [FLAC]/01 Water.flac
+55:MP3/Redacted/Rubba - In Motion Modern Progressive Group Sounds Played By Rubba (1980) [320]/07 - In Motion.mp3
+56:FLAC/Royal Blood/2017 - How Did We Get So Dark/01-How Did We Get So Dark.flac
+57:FLAC/Royal Blood/2017 - How Did We Get So Dark/02-Lights Out.flac
+58:FLAC/Seafret/Seafret - Tell Me It's Real (2016) FLAC/05 - Oceans.flac
+59:FLAC/Seafret/Seafret - Tell Me It's Real (2016) FLAC/10 - Atlantis.flac
+60:FLAC/Slowdive/Slowdive -2017-Slowdive (FLAC)/04 - Sugar For The Pill.flac
+61:FLAC/The Strokes/2003 Room on Fire/The Strokes - 2003 - Room On Fire - 02 - Reptilia.flac
+62:FLAC/Walk the Moon/2014 - Talking Is Hard/B6. Aquaman.flac
+63:FLAC/Walk the Moon/2014 - Talking Is Hard/A3. Shut Up And Dance.flac
+64:FLAC/Weezer/Weezer - Feels Like Summer (2017) [WEB - FLAC] (2017 - Crush Music, Altantic - None)/1-1 Feels Like Summer (Acoustic).flac
+65:FLAC/Weezer/2001 - Green Album/04 Island In The Sun.m4a
+66:FLAC/The Wombats/2007 - A Guide To Love, Loss & Desperation/08 - Let's Dance To Joy Division.flac
+67:FLAC/The Vaccines/If You Wanna/01 - If You Wanna.flac
+68:FLAC/The Strokes/2006 First Impressions of Earth/01 - You Only Live Once.flac
+69:FLAC/The Naked and Famous/2013 - In Rolling Waves/04 - Rolling Waves.flac
+playlist_end

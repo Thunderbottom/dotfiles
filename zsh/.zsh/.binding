@@ -1,0 +1,8 @@
+# bindings
+
+bindkey -e
+bindkey '\e[3~' delete-char
+bindkey '^p' history-search-backward
+bindkey '^n' history-search-forward
+bindkey ' '  magic-space
+

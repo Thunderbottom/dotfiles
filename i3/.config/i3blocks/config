@@ -1,0 +1,28 @@
+command=/home/tbottom/.config/i3blocks/scripts/$BLOCK_NAME
+separator_block_width=15
+markup=none
+
+[mpd]
+command=echo "$(mpc current)"
+interval=1
+
+[ssid]
+command=echo "$(iw dev wlan0 link | grep SSID | cut -d " " -f 2-)"
+interval=5
+
+[temperature]
+interval=5
+
+[load_average]
+interval=5
+
+[volume]
+interval=1
+
+[battery]
+instance=0
+interval=5
+
+[time]
+command=date '+%Y-%d-%m %H:%M'
+interval=1

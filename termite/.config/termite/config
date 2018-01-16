@@ -1,0 +1,33 @@
+[options]
+allow_bold = true
+font = Gohu GohuFont 8
+mouse_autohide = true
+scrollback_lines = 10000
+cursor_shape = ibeam
+scrollbar = off
+
+[colors]
+highlight = #2F2F2F
+color0 = #0A0606
+color1 = #F2777A
+color2 = #99CC99
+color3 = #FFCC66
+color4 = #6699CC
+color5 = #CC99CC
+color6 = #66CCCC
+color7 = #F2F0EC
+color8 = #747369
+color9 = #F2777A
+color10 = #99CC99
+color11 = #FFCC66
+color12 = #6699CC
+color13 = #CC99CC
+color14 = #66CCCC
+color15 = #F2F0EC
+
+[hints]
+foreground = #DCD6D6
+background = #0A0606
+#active_foreground = #e68080
+#active_background = #3f3f3f
+padding = 3
