@@ -35,10 +35,12 @@ pcm.dmixed {
 #                       5 5
                 }
         }
-        capture.pcm "hw:0"
+        capture.pcm "plughw:0"
 }
 
 pcm.!default {
         type plug
         slave.pcm "dmixed"
+	ttable.0.1 1
+	ttable.1.0 1
 }

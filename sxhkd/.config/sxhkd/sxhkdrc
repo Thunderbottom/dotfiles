@@ -80,9 +80,9 @@ XF86AudioLowerVolume
 XF86AudioMute
 	alsamute
 XF86MonBrightnessUp
-	xbacklight -inc 10
+	cbacklight --inc 10
 XF86MonBrightnessDown
-	xbacklight -dec 10
+	cbacklight --dec 10
 XF86KbdBrightnessUp
 	keyboardbacklight.sh up
 XF86KbdBrightnessDown
