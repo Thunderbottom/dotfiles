@@ -1,211 +1,80 @@
-; ----------
-; COLORS
-; ----------
-
 [colors]
-background		=	#0A0606
-foreground 		= 	#DCD6D6
-green 			= 	#99CC99
-gray 			= 	#A0A5AC
+background = #0A0606
+dim = #A0A5AC
+foreground = #DCD6D6
+active = #386CBB
 
-include-file 		= 	/home/sbxiii/.config/polybar/colors
+[bar/base]
+monitor = LVDS-1
+width = 100%
+height = 28
+bottom = true
 
-; ----------
-; BARS
-; ----------
+background = ${colors.background}
+foreground = ${colors.foreground}
 
-[bar/laptop]
-monitor 			= 	LVDS-1
-width 				= 	100%
-height 				= 	28
-offset-x 			= 	0
-offset-y 			= 	0
-;bottom 			= 	true
-fixed-center 			= 	true
-override-redirect 		= 	false
-wm-restack 			= 	bspwm
-background 			= 	${colors.background}
-foreground 			= 	${colors.foreground}
-border-bottom-size 		= 	0
-border-top-size 		= 	0
-border-color 			= 	${colors.transparentBackgrnd}
-underline-size 			= 	3
-underline-color 		= 	${colors.green}
-spacing 			=	1
-padding-left 			= 	0
-padding-right 			= 	0
-module-margin-left 		= 	0
-module-margin-right 		= 	0
-font-0 				= 	xos4 Terminus:pixelsize=9;1
-font-1 				= 	Wuncon Siji:size=10;1
+font-0 = "Iosevka Term:size=8;2"
+font-1 = "Wuncon Siji:size=18;2"
 
-modules-left 			= 	bspwm
-modules-center 			=	mpd
-modules-right 			= 	wifi alsa date battery 
+padding = 2 
+module-margin = 2
 
-; ----------
-; MODULES
-; ----------
-
-
-; ----------
-; bspwm
-; ----------
-
-[module/bspwm]
-type 				= 	internal/bspwm
-format 				= 	<label-state> <label-mode>
-strip-wsnumbers 		= 	true
-index-sort 			= 	true
-enable-scroll			=	false
-ws-icon-0 			= 	1;
-ws-icon-1 			= 	2;
-ws-icon-2 			= 	3;
-ws-icon-3 			= 	4;
-ws-icon-4 			= 	5;
-ws-icon-default 		= 	
-label-focused 			= 	
-label-focused-background 	= 	${colors.alt-background}
-label-focused-underline		= 	${colors.green}
-label-focused-padding 		= 	1
-label-visible 			= 	%icon%
-label-visible-padding 		= 	1
-label-unfocused 		= 	%icon%
-label-unfocused-padding 	= 	1
-label-occupied 			= 	%icon%
-label-occupied-padding 		=	1
-label-urgent 			= 	%icon%
-label-urgent-padding 		= 	1
-label-empty 			= 	%icon%
-label-empty-foreground 		= 	${colors.dim-foreground}
-label-empty-padding 		= 	1
-
-; ----------
-; xwindow
-; ----------
-
-[module/xwindow]
-type 				= 	internal/xwindow
-label 				= 	%title:0:120:...%
-label-padding 			= 	1
-
-; ----------
-; date
-; ----------
+modules-left = date
+modules-center = bspwm
+modules-right = alsa
 
 [module/date]
-type 				= 	internal/date
-interval 			= 	1.0
-date 				= 	"%a, %b %d "
-time 				= 	"%H:%M"
-date-alt 			= 	%A, %d %B %Y
-time-alt 			= 	"%H:%M:%S"
-label 				= 	%date% %time%
-format 				= 	 <label> 
-format-background 		= 	${colors.background}
-format-foreground 		= 	${colors.foreground}
-format-padding 			= 	1
+type = internal/date
 
-; ----------
-; battery
-; ----------
+interval = 1.0
 
-[module/battery]
-type 				= 	internal/battery
-full-at 			= 	100
-battery 			= 	BAT0
-adapter 			= 	ADP1
-poll-interval 			= 	5
-format-charging 		= 	<label-charging>
-format-discharging 		= 	<label-discharging>
-format-full 			= 	<label-full>
-label-charging 			= 	%percentage%%
-label-discharging 		= 	%percentage%%
-label-full 			= 	%percentage%
-format-charging-padding 	= 	1
-format-discharging-padding 	= 	1
-format-full-padding 		= 	1
+date = " %m-%d"
+date-alt = " %H:%M"
 
-; ----------
-; wifi
-; ----------
+[module/bspwm]
+type = internal/bspwm
 
-[module/wifi]
-type                            =       internal/network
-interface                       =       wlp2s0b1
-interval                        =       5.0
-accumulate-stats                =       true
-format-connected                =       <label-connected>
-format-connected-foreground     =       ${colors.foreground}
-format-disconnected             =       <label-disconnected>
-label-connected                 =        %essid%
-label-connected-foreground      =       ${colors.foreground}
-label-disconnected              =       No WiFi
-label-disconnected-foreground   =       ${colors.foreground}
-
-; ----------
-; volume
-; ----------
-
-[module/alsa]
-type 				= 	internal/alsa
-master-mixer 			= 	Master
-master-soundcard 		= 	default
-mapped 				= 	true
-format-volume 			= 	<ramp-volume><label-volume>
-format-muted 			= 	<label-muted>
-label-volume 			= 	%percentage%
-label-muted			= 	 muted
-label-muted-foreground 		= 	${colors.gray}
-format-volume-padding 		= 	1
-format-muted-padding 		= 	1
-ramp-volume-0 			= 	
-ramp-volume-1 			= 	
-ramp-volume-2 			= 	
-ramp-headphones-0 		= 	
-
-; ----------
-; powermenu
-; ----------
-
-[module/powermenu]
-type 				= 	custom/menu
-label-open 			= 	
-;label-open-background 		= 	#dd0000
-;label-open-foreground 		= 	#fff
-label-close 			= 	cancel
-label-close-background 		= 	${colors.alt-background}
-;label-close-foreground 	= 	#fff
-label-open-padding 		= 	2
-label-close-padding 		= 	2
-menu-0-0-padding 		=	1
-menu-0-1-padding 		= 	1
-menu-0-0                        =       reboot
-menu-0-0-exec                   =       shutdown -r now
-menu-0-1                        =       
-menu-0-1-exec                   =       shutdown now
-
-; ----------
-; mpd
-; ----------
+ws-icon-default = 
+label-focused = 
+label-occupied = %icon%
+label-urgent = %icon%
+label-empty = %icon%
+label-separator = " "
+label-focused-foreground = ${colors.active}
+label-dimmed-foreground = ${colors.dim}
+label-occupied-foreground = ${colors.dim}
+label-urgent-foreground = ${colors.dim}
+label-empty-foreground = ${colors.dim}
 
 [module/mpd]
-type 				= 	internal/mpd
-host 				= 	127.0.0.1
-port 				= 	6600
-interval 			= 	2
-format-online 			= 	<label-song>
-label-song 			= 	 %artist% - %title%
-format-online-padding 		= 	3
+type = internal/mpd
+format-online = <label-song>  <icon-prev> <toggle> <icon-next>
+format-playing = ${self.format-online}
+format-paused = ${self.format-online}
+format-stopped = ${self.format-online}
 
-; ----------
-; update
-; ----------
+label-song = %artist% - %title%
 
-[module/update]
-type 				= 	custom/script
-interval 			= 	1000
-format 				= 	<label>
-format-padding 			= 	2
-label 				= 	"%output:0:30%"
-exec 				= 	~/.config/polybar/updates.sh
+icon-play = 
+icon-pause = 
+icon-prev = 
+icon-next = 
+
+[module/alsa]
+type = internal/alsa
+master-mixer = Master
+master-soundcard = default
+mapped = true
+format-volume = <ramp-volume><label-volume>
+format-muted = <label-muted>
+label-volume = %percentage%
+label-muted =  muted
+label-muted-foreground = ${colors.dim}
+format-volume-padding = 1
+format-muted-padding = 1
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+ramp-headphones-0 = 
+
+

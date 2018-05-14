@@ -19,8 +19,9 @@ bspc config center_pseudo_tiled		false
 bspc config single_monocle		true
 bspc config pointer_modifier		mod1
 
-$HOME/.screenlayout/xrandr-i3.sh
+#$HOME/.screenlayout/xrandr-i3.sh
+display-on
 xrandr --output LVDS-1 --brightness 0.85
 nitrogen --restore &
-compton --config $HOME/.config/compton/compton.conf &
-polybar laptop &
+compton --config $HOME/.config/compton/compton.conf -b &
+polybar base &

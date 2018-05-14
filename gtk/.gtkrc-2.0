@@ -1,7 +1,7 @@
 gtk-icon-theme-name = "Paper"
-gtk-font-name = "xos4 Terminus 9"
+gtk-font-name = "Iosevka Term 8"
 
 style "user-font"
 {
-	font_name="xos4 Terminus 9"
+	font_name="Iosevka Term 8"
 }

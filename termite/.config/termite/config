@@ -1,6 +1,7 @@
 [options]
 allow_bold = true
-font = xos4 Terminus 8
+#font = xos4 Terminus 8
+font = Iosevka Term 8
 mouse_autohide = true
 scrollback_lines = 10000
 cursor_shape = ibeam

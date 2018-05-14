@@ -1,0 +1,9 @@
+#!/bin/bash
+
+EXTERN=HDMI-1
+
+if $(xrandr | grep -q "$EXTERN connected"); then
+	$HOME/.screenlayout/xrandr-i3.sh
+else
+	$HOME/.screenlayout/hdmi-off.sh
+fi
