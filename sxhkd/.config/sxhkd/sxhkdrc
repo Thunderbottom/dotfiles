@@ -3,7 +3,7 @@ super + Return
 	termite
 # program launcher
 super + d
-	dmenu_run -nb "#000000" -nf "#ffffff" -sb "#adadad" -fn "Iosevka Term-8" -h 28
+	dmenu_run -nb "#000000" -nf "#ffffff" -sb "#adadad" -fn "Iosevka-8" -h 28
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd

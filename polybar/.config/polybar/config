@@ -14,7 +14,7 @@ background = ${colors.background}
 foreground = ${colors.foreground}
 
 font-0 = "Iosevka Term:size=8;2"
-font-1 = "Wuncon Siji:size=18;2"
+font-1 = "Siji:size=18;2"
 
 padding = 2 
 module-margin = 2
