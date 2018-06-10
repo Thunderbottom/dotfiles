@@ -1,3 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =4
 let g:netrw_dirhist_1='/home/sbxiii/.dotfiles/ncmpcpp/.ncmpcpp'
+let g:netrw_dirhist_2='/home/smolboye/hdd/git/GitHub/site/themes/coder/layouts'
+let g:netrw_dirhist_3='/home/smolboye/hdd/git/GitHub/site/content/posts'
+let g:netrw_dirhist_4='/home/smolboye/hdd/git/GitHub/site'

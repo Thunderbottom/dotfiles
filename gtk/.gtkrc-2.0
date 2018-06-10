@@ -1,7 +1,7 @@
 gtk-icon-theme-name = "Paper"
-gtk-font-name = "Iosevka Term 8"
+gtk-font-name = "Pragmata Pro Mono 7"
 
 style "user-font"
 {
-	font_name="Iosevka Term 8"
+	font_name="Pragmata Pro Mono 7"
 }

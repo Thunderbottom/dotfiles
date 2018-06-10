@@ -50,7 +50,7 @@ get_wm() {
 
 # get number of packages
 get_packages() {
-	packages=$(qlist -IRv | wc -l)
+	packages=$(xbps-query -l | wc -l)
 }
 
 # run all functions
