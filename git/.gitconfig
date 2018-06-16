@@ -1,0 +1,9 @@
+[user]
+	email = chinmaydpai@gmail.com
+	name = Chinmay Pai
+[core]
+	editor = vim
+[gpg]
+	program = /usr/bin/gpg2
+[commit]
+	gpgsign = true
