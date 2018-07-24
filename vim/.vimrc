@@ -30,3 +30,5 @@ autocmd BufEnter * call NERDTreeRefresh()
 map <C-n> :NERDTreeToggle<CR>
 " close vim if nerdtree is the only window
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+set number
